@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>747</width>
-    <height>430</height>
+    <width>773</width>
+    <height>552</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -173,8 +173,8 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>170</y>
+      <x>270</x>
+      <y>330</y>
       <width>121</width>
       <height>19</height>
      </rect>
@@ -187,7 +187,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>220</y>
+      <y>360</y>
       <width>113</width>
       <height>27</height>
      </rect>
@@ -197,7 +197,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>220</y>
+      <y>360</y>
       <width>113</width>
       <height>27</height>
      </rect>
@@ -207,7 +207,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>220</y>
+      <y>360</y>
       <width>61</width>
       <height>19</height>
      </rect>
@@ -220,7 +220,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>220</y>
+      <y>360</y>
       <width>61</width>
       <height>19</height>
      </rect>
@@ -233,7 +233,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>300</y>
+      <y>440</y>
       <width>91</width>
       <height>19</height>
      </rect>
@@ -245,8 +245,8 @@
    <widget class="QLabel" name="AffineLabel">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>320</y>
+      <x>210</x>
+      <y>460</y>
       <width>261</width>
       <height>19</height>
      </rect>
@@ -259,7 +259,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>270</y>
+      <y>410</y>
       <width>661</width>
       <height>19</height>
      </rect>
@@ -272,7 +272,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>320</y>
+      <y>460</y>
       <width>121</width>
       <height>19</height>
      </rect>
@@ -285,7 +285,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>350</y>
+      <y>490</y>
       <width>171</width>
       <height>27</height>
      </rect>
@@ -298,7 +298,7 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>320</y>
+      <y>460</y>
       <width>141</width>
       <height>19</height>
      </rect>
@@ -311,7 +311,7 @@
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>350</y>
+      <y>490</y>
       <width>171</width>
       <height>27</height>
      </rect>
@@ -320,33 +320,79 @@
      <string>Seleccionar Archivo</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>110</y>
-      <width>41</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>N = </string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="anillovige">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>110</y>
-      <width>113</width>
-      <height>27</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
       <x>460</x>
+      <y>360</y>
+      <width>41</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>N = </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="anilloAffine">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>360</y>
+      <width>113</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>170</y>
+      <width>121</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>AE Y AEE</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="AEYAEE_ALFA">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>220</y>
+      <width>113</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>61</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alfa = </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="AEYAEE_ANI">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>220</y>
+      <width>113</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
       <y>220</y>
       <width>41</width>
       <height>19</height>
@@ -356,14 +402,43 @@
      <string>N = </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="Ani">
+   <widget class="QLabel" name="AEYAEE_RES">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>220</y>
-      <width>113</width>
+      <x>120</x>
+      <y>290</y>
+      <width>621</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prueba!!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>91</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Resultado:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AEYAEE_Push">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>260</y>
+      <width>101</width>
       <height>27</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>Probar</string>
     </property>
    </widget>
   </widget>
