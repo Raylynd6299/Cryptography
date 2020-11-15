@@ -34,8 +34,7 @@ def decifrarVigenereProceso(clave,pathh):
     arch = f"{arch[0]}_vig.txt"
     with open(arch,"w+") as filee:
         filee.write(cipherText)
-        
-        
+               
 def cifrarAffineProceso(alfa,beta,anillo,pathh):
     plainText = ""
     with open(pathh,"r+") as file:
