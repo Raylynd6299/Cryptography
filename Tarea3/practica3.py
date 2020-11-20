@@ -38,17 +38,17 @@ class Pra3(QtWidgets.QMainWindow,GUI_P3.Ui_MainWindow):
         elif selMOD == "Modo_OFB":
             selMOD = DES.MODE_OFB
         if self.ui.Encry.isChecked():
-            flag = Pro.Encriptar(Password_text,selMOD,self.pathh)
+            flag = Pro.Cifrar(Password_text,selMOD,self.pathh)
             if flag :
-                self.ui.Estado_L.setText("Encriptado")
+                self.ui.Estado_L.setText("Cifrado")
             else :
-                self.ui.Estado_L.setText("Error en el Encriptado")
+                self.ui.Estado_L.setText("Error al Cifrar")
         elif self.ui.Descry.isChecked():
-            flag = Pro.Desencriptar(Password_text,selMOD,self.pathh)
+            flag = Pro.DesCifrar(Password_text,selMOD,self.pathh)
             if flag :
-                self.ui.Estado_L.setText("Desencriptado")
+                self.ui.Estado_L.setText("DesCifrado")
             else :
-                self.ui.Estado_L.setText("Error en el Desencriptado")
+                self.ui.Estado_L.setText("Error al DesCifrar")
         else:
             self.ui.Estado_L.setText("Seleccione una accion")
             return

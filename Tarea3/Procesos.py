@@ -1,9 +1,10 @@
 from Crypto.Cipher import DES
-from Crypto import Random
+#from Crypto import Random
 
 #iv = Random.new().read(DES.block_size)
 iv = b'\xa3my\x12\xb5\xc3\xc3W'
-def Encriptar(llave,tipo,pathDir):
+
+def Cifrar(llave,tipo,pathDir):
     global iv
     llave_tr = ""
     if len(llave) != 8:
@@ -43,7 +44,7 @@ def Encriptar(llave,tipo,pathDir):
         file.write(header+encrypText)
     return True
     
-def Desencriptar(llave,tipo,pathDir):
+def DesCifrar(llave,tipo,pathDir):
     global iv
     llave_tr = ""
     if len(llave) != 8:
