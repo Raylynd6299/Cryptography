@@ -71,7 +71,7 @@ elif args.Steps and args.S and args.Key and args.Message :
         with open(args.Key,mode="rb") as privateFile:
             keydata = privateFile.read()
         privateKey = RSA.importKey(keydata)
-        
+       
         with open(args.Message,mode="rb") as DataFile:
             Data = DataFile.read()
             
@@ -82,40 +82,42 @@ elif args.Steps and args.S and args.Key and args.Message :
             signer = pkcs1_15.new(privateKey)
             
             signature = signer.sign(msg_hasher)
-            
-            with open(f"{name[0]}.sig",mode="wb") as SignatureFile:
+                        
+            with open(f"{name[0]}.{name[1]}",mode="wb") as SignatureFile:
                 SignatureFile.write(signature)
+                SignatureFile.write(Data)
             
         else:
             print("Ingrese un nombre de archivo valido")
     else:
         print("Ingrese la llave Privada Correcta")     
-elif args.Steps and args.V and args.Key and args.Message and args.s:
+elif args.Steps and args.V and args.Key and args.s:
     if "PubKey.key" in args.Key:
-        if ".sig" in args.s:
-            with open(args.Key,mode="rb") as publicFile:
-                keydata = publicFile.read()
-            publicKey = RSA.importKey(keydata)
-            
-            with open(args.Message,mode="rb") as DataFile:
-                Data = DataFile.read()
-                
-            with open(args.s,mode="rb") as SignatureFile:
-                signature = SignatureFile.read()
-            
-            msg_hasher =  Hash.SHA1.new(Data)
-                
-            try:
-                pkcs1_15.new(publicKey).verify(msg_hasher, signature)
-                print("El archivo no fue modificado, Firma valida, Verificado!!!")
-            except:
-                print("El archivo fue modificado, Error Firma INVALIDA")     
+        with open(args.Key,mode="rb") as publicFile:
+            keydata = publicFile.read()
+        publicKey = RSA.importKey(keydata)
                         
-        else:
-            print("Ingrese una firma digital valida")
+        with open(args.s,mode="rb") as SignatureFile:
+            signature = SignatureFile.read(256)
+            Data = SignatureFile.read()
+        #print(Data)
+        msg_hasher =  Hash.SHA1.new(Data)
+        
+        name = args.s
+        name = name.strip().split(".")
+        try:
+            pkcs1_15.new(publicKey).verify(msg_hasher, signature)
+            with open(f"{name[0]}.{name[1]}",mode="wb") as SignatureFile:
+                SignatureFile.write(Data)
+            print("El archivo no fue modificado, Firma valida, Verificado!!!")
+        except:
+            print("El archivo fue modificado, Error Firma INVALIDA")     
+                    
     else:
         print("Ingrese la llave Publica Correcta")
 elif args.S and args.Key and args.Message and args.Func:
+    
+    ## Falta Terminarlo
     if "PrivKey.key" in args.Key:
         with open(args.Key,mode="rb") as privateFile:
             keydata = privateFile.read()
